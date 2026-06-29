@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "demo-quote-cli"
+version = "3.0.0"
+description = "An unnecessarily modular CLI that prints programming quotations."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "demo" }]
+
+[project.scripts]
+quote = "quotelib.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = [
+    "quotelib",
+    "quotelib.domain",
+    "quotelib.config",
+    "quotelib.repositories",
+    "quotelib.strategies",
+    "quotelib.formatters",
+    "quotelib.events",
+    "quotelib.services",
+    "quotelib.cli",
+    "quotelib.utils",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
