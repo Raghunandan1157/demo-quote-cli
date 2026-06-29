@@ -3,7 +3,8 @@
 A zero-dependency CLI that prints curated programming quotations — now powered
 by an over-engineered, pattern-saturated delivery subsystem (repositories,
 strategies, formatters, an event bus, dependency injection, and a layered
-configuration cascade).
+configuration cascade), exploded across the sprawling `quotelib` package with
+one concept per file. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## Usage
 
